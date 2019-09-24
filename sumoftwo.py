@@ -5,4 +5,4 @@ class Solution:
             count += 1
             other_num = target - num
             if other_num in nums[count:]:
-                return [nums[count:].index(num), nums[count:].index(other_num)]
+                return [count-1, nums[count:].index(other_num)+count]
