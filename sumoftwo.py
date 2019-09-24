@@ -4,5 +4,5 @@ class Solution:
         for num in nums:
             count += 1
             other_num = target - num
-            if other_num in nums:
-                return [nums.index(num), nums.index(other_num)]
+            if other_num in nums[count:]:
+                return [nums[count:].index(num), nums[count:].index(other_num)]
