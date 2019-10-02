@@ -24,16 +24,15 @@ class Solution:
             if new_val > 9:
                 remainder, new_value = str(new_val)
                 remainder = int(remainder)
-            new_values.append(new_value)
+            new_values.append(int(new_value))
             current_node_l1 = current_node_l1.next
             current_node_l2 = current_node_l2.next
         new_nodes = [ListNode(val) for val in new_values]
         for index, node in enumerate(new_nodes):
             if index + 1 < len(new_nodes):
                 node.next = new_nodes[index + 1]
-        print new_nodes[0]
         return new_nodes[0]
-
+        
 listNode1 = ListNode(2)
 listNode2 = ListNode(4)
 listNode3 = ListNode(3)
