@@ -13,7 +13,7 @@ class Solution:
             node = node.next
         return length
 
-    def addTwoNumbers(self, l1, l2):
+    def addTwoNumbers(self, l1, l2) -> :
         remainder = 0
         next_node_l1 = l1.next
         next_node_l2 = l2.next
@@ -22,7 +22,8 @@ class Solution:
         if new_value > 9:
             rem, new_value = str(new_value)
             remainder = int(rem)
-        new_values.append(int(new_value))
+        if new_value != 0:
+            new_values.append(int(new_value))
         current_node_l1 = next_node_l1
         current_node_l2 = next_node_l2
         length = 0
@@ -45,6 +46,8 @@ class Solution:
             if index + 1 < len(new_nodes):
                 node.next = new_nodes[index + 1]
         return new_nodes[0]
+
+
 
 
 
