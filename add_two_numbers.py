@@ -40,7 +40,8 @@ class Solution:
             if self.linked_list_length(l1)== len(new_values):
                 break
         else:
-            new_values.append(remainder)
+            if remainder != 0:
+                new_values.append(remainder)
         new_nodes = [ListNode(val) for val in new_values]
         for index, node in enumerate(new_nodes):
             if index + 1 < len(new_nodes):
