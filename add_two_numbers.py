@@ -14,6 +14,7 @@ class Solution:
         return length
 
     def addTwoNumbers(self, l1, l2) -> :
+        "Add two numbers and return linked list"
         remainder = 0
         next_node_l1 = l1.next
         next_node_l2 = l2.next
@@ -39,9 +40,9 @@ class Solution:
             current_node_l2 = current_node_l2.next
             if self.linked_list_length(l1)== len(new_values):
                 break
-        else:
-            if remainder != 0:
-                new_values.append(remainder)
+        # else:
+        #     if remainder != 0:
+        #         new_values.append(remainder)
         new_nodes = [ListNode(val) for val in new_values]
         for index, node in enumerate(new_nodes):
             if index + 1 < len(new_nodes):
